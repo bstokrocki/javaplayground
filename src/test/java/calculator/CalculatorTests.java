@@ -15,5 +15,13 @@ public class CalculatorTests {
     @Test
     public void testAdd() {
         Assert.assertEquals(5, calc.add(2, 3));
+        Assert.assertEquals(0, calc.add(0, 0));
+        Assert.assertEquals(0, calc.add(-5, 5));
+
+        Assert.assertEquals(2, calc.subtract(10, 8));
+
+        Assert.assertEquals(25, calc.multiply(5, 5));
+
+        Assert.assertEquals(5, calc.divide(10, 2));
     }
 }
