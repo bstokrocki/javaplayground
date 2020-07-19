@@ -9,19 +9,14 @@ public class CalculatorTests {
 
     @Before
     public void setup() {
-//        calc = new Calculator();
+        calc = new Calculator();
     }
 
     @Test
     public void testAdd() {
         Assert.assertEquals(5, calc.add(2, 3));
-        Assert.assertEquals(0, calc.add(0, 0));
-        Assert.assertEquals(0, calc.add(-5, 5));
-
-        Assert.assertEquals(2, calc.subtract(10, 8));
-
-        Assert.assertEquals(25, calc.multiply(5, 5));
-
-        Assert.assertEquals(5, calc.divide(10, 2));
+        Assert.assertEquals(5, calc.subtract(10, 5));
+        Assert.assertEquals(5, calc.divide(25, 5));
+        Assert.assertEquals(10, calc.multiply(2, 5));
     }
 }
