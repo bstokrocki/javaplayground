@@ -4,7 +4,6 @@ public class Calculator implements ICalculator {
 
     @Override
     public int add(int x, int y) {
-
         return x + y;
     }
 
@@ -15,7 +14,7 @@ public class Calculator implements ICalculator {
 
     @Override
     public int multiply(int x, int y) {
-        return x*y;
+        return x * y;
     }
 
     @Override
