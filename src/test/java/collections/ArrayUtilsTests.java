@@ -9,11 +9,13 @@ public class ArrayUtilsTests {
 
     @Before
     public void setup() {
-        utils = ArrayUtils();
+        utils = new ArrayUtils();
     }
 
     @Test
     public void testSum() {
+        Assert.assertEquals(24, utils.sum(new int[] {1, 3, 7, 4, 1, 8}));
+
         Assert.assertEquals(24, utils.sum(new int[] {1, 3, 7, 4, 1, 8}));
         Assert.assertEquals(3, utils.sum(new int[] {3}));
         Assert.assertEquals(0, utils.sum(new int[] {-8, 3, 5}));
@@ -28,9 +30,9 @@ public class ArrayUtilsTests {
 
     @Test
     public void testCalculateAverage() {
-        Assert.assertEquals(2.3, utils.calculateAverage(new double[] {1.2, 3.1, 7.8, 4.0, -4.6}));
-        Assert.assertEquals(3.0, utils.calculateAverage(new double[] {3.0}));
-        Assert.assertEquals(0.0, utils.calculateAverage(new double[] {-8.5, 3.2, 5.3}));
+        Assert.assertEquals(2.3, utils.calculateAverage(new double[] {1.2, 3.1, 7.8, 4.0, -4.6}), 0.001f);
+        Assert.assertEquals(3.0, utils.calculateAverage(new double[] {3.0}), 0.001f);
+        Assert.assertEquals(0.0, utils.calculateAverage(new double[] {-8.5, 3.2, 5.3}), 0.001f);
     }
 
     @Test

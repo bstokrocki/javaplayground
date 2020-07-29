@@ -1,17 +1,19 @@
 public class Main {
     public static void main(String[] args) {
-        String a = "testasd";
-        String b = "testasd";
+        int[] intArray = new int[3];
+        intArray[0] = 5;
+        intArray[1] = -2;
+        intArray[2] = 145;
 
-        int x = 3;
-        int y = 2;
 
-        if (a.equals(b)) {
-            System.out.println("abcd");
+        for (int i=0; i<intArray.length; i++ ){
 
-        } else {
-            System.out.println("zzz");
+            System.out.println(intArray[i]);
         }
+
+//        System.out.println(intArray[0]);
+//        System.out.println(intArray[1]);
+//        System.out.println(intArray[2]);
     }
 
 }
