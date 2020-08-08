@@ -40,8 +40,23 @@ public class ArrayUtils implements IArrayUtils {
 
     @Override
     public int findLargestNumber(int[] numbers) {
-        int x = sum(new int[] {1, 2});
-        return 0;
+
+        if (numbers.length == 0) {
+            return 0;
+        }
+
+        //new int[] {-10, -6, -3}
+        int largestNumber = numbers [0];
+
+        for (int number:numbers){
+            if (number>largestNumber) {
+
+                largestNumber = number;
+            }
+
+        }
+
+        return largestNumber;
     }
 
     @Override
@@ -61,11 +76,28 @@ public class ArrayUtils implements IArrayUtils {
 
     @Override
     public String join(String[] texts) {
-        return null;
+
+        String s1 = texts [0];
+        String s2 = texts [1];
+        String s3 = texts [2];
+
+        String join = s1+s2+s3;
+
+        return join;
     }
 
     @Override
     public int[] takeFirstTwoNumbers(int[] numbers) {
-        return new int[0];
+
+        int [] firstNumbers = new int [2];
+
+        int num1 = numbers [0];
+        int num2 = numbers [1];
+
+        firstNumbers [0]= num1;
+        firstNumbers [1] = num2;
+
+
+        return firstNumbers;
     }
 }
